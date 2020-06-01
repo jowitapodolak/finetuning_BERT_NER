@@ -128,8 +128,7 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  experiments/run_transformer_all_features.sh  (recommended) 
  
  ### lanaguage groups for experiments: 
- ![Language groups for feature 1]
- https://github.com/jowitapodolak/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png
+ ![Language groups for feature1](https://github.com/jowitapodolak/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png)
  
  
  ### scripts description 
@@ -165,7 +164,7 @@ Each model we run is saved in the folder results as pytorch_model.bin file. The 
 Models and full results are saved in **results_lan** folder. 
 An exemplary path, to results for the distance 1.0, between Ukraininan and Latvian:
 ```bash
- results_lan/results_1.0/output_1.0/Ukr_Ltv_..
+ results_lan/results_1.0/output_1.0/Ukr_Ltv_1
  ```
  
 After running all experiments, there are in /LanSimilarity - results, /LanSim_FiltFeat - results and /Features - results, executable python-files collecting F1 score, precision and recall results and gather them in a results-csv file.
