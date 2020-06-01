@@ -149,6 +149,7 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  
  
  ## Results 
+ ### for feature expriments
  Models and full results are saved in folder results. 
  
  This is an exemplary line (chunk of it) from the experiment scrip of feature 1: 
@@ -158,7 +159,9 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  
  We see here clearly the hierarchy of the results folder after running. They are all storred in the results folder. Then for each feature we have an output folder. Each output folder has further four folders (for four cross validation datasets). Then each dataset has 2 experiments and each experiment had two fine-tunings.
  
-Each model we run is saved in the folder results as pytorch_model.bin file. The evaluation over labels is in eval_results.txt (from here we take F1 scores for our thesis)  
+Each model we run is saved in the folder results as pytorch_model.bin file. The evaluation over labels is in eval_results.txt (from here we take F1 scores for our thesis)   
+
+### for language-pair experiment
 
 After running all experiments, there are in /LanSimilarity - results, /LanSim_FiltFeat - results and /Features - results, executable python-files collecting F1 score, precision and recall results and gather them in a results-csv file.
 
