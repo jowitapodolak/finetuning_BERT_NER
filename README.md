@@ -128,8 +128,8 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  experiments/run_transformer_all_features.sh  (recommended) 
  
  ### lanaguage groups for experiments: 
- 
- (https://github.com/jowitapodolak/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png)
+ ![Language groups for feature 1]
+ https://github.com/jowitapodolak/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png
  
  
  ### scripts description 
