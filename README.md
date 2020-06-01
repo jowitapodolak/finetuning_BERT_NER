@@ -129,7 +129,7 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  
  ### lanaguage groups for experiments: 
  
- ![Language groups for feature 1](https://github.itu.dk/jopo/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png)
+ (https://github.com/jowitapodolak/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png)
  
  
  ### scripts description 
