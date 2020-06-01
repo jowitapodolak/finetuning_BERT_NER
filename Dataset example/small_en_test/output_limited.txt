@@ -1,0 +1,198 @@
+Berg Berg_im_Donaugau_Abbey Berg_im_Donaugau_Abbey ORG 0.989974328051 None B-ORG
+im None I-ORG
+Donaugau None I-ORG
+Abbey None I-ORG
+
+In None O
+1931 None O
+and None O
+1932 None O
+, None O
+he None O
+had None O
+one-man None O
+shows None O
+in None O
+Belgrade Belgrade Belgrade GPE 1.0 None B-LOC
+, None O
+Zagreb Zagreb Zagreb GPE 1.0 None B-LOC
+, None O
+and None O
+Novi Novi_Sad Novi_Sad GPE 1.0 None B-LOC
+Sad None I-LOC
+. None O
+
+He None O
+was None O
+the None O
+son None O
+of None O
+Osulf Osulf_I_of_Bamburgh Osulf_I PER 0.999913456739 None B-PER
+I None I-PER
+and None O
+father None O
+of None O
+Uhtred Uhtred_the_Bold Uhtred_the_Bold PER 0.999694089563 None B-PER
+the None I-PER
+Bold None I-PER
+, None O
+Ealdorman Ealdorman_of_Northumbria Ealdorman_of_Northumbria ORG 0.734924935788 None B-ORG
+of None I-ORG
+Northumbria None I-ORG
+. None O
+
+His None O
+work None O
+has None O
+also None O
+been None O
+published None O
+in None O
+The The_New_York_Times The_New_York_Times ORG 1.0 None B-ORG
+New None I-ORG
+York None I-ORG
+Times None I-ORG
+'' None O
+, None O
+The The_Atlantic The_Atlantic ORG 0.999967648153 None B-ORG
+Atlantic None I-ORG
+'' None O
+, None O
+GQ GQ GQ ORG 0.999999999927 None B-ORG
+'' None O
+, None O
+New New_York_(magazine) New_York ORG 0.999999999882 None B-ORG
+York None I-ORG
+'' None O
+and None O
+Slate Slate_(magazine) Slate ORG 0.997530231643 None B-ORG
+'' None O
+. None O
+
+By None O
+the None O
+late None O
+1830s None O
+, None O
+his None O
+parents None O
+relocated None O
+to None O
+Tallahassee Tallahassee,_Florida Tallahassee,_Florida GPE 1.0 None B-LOC
+, None I-LOC
+Florida None I-LOC
+. None O
+
+The None O
+next None O
+year None O
+he None O
+published None O
+his None O
+collection None O
+''Sketches None O
+, None O
+Drawing None O
+, None O
+And None O
+Studies None O
+'' None O
+( None O
+Skice None O
+, None O
+crtezi None O
+, None O
+studije None O
+) None O
+in None O
+Spain Spain Spain GPE 0.999996832097 None B-LOC
+. None O
+
+It None O
+is None O
+housed None O
+in None O
+the None O
+courtyard None O
+of None O
+the None O
+Museo Museo_Nacional_de_Arqueología_Antropología_e_Historia_del_Perú Museo_Nacio
+nal_de_Arqueología_Antropología_e_Historia_del_Perú ORG 0.734924935788 None B-OR
+G
+Nacional None I-ORG
+de None I-ORG
+Arqueología None I-ORG
+Antropología None I-ORG
+e None I-ORG
+Historia None I-ORG
+del None I-ORG
+Perú None I-ORG
+'' None O
+in None O
+Lima Lima Lima GPE 0.999999646766 None B-LOC
+. None O
+
+Aaron Aaron_Shattock Aaron_Shattock PER 0.999995019478 None B-PER
+Shattock None I-PER
+and None O
+pick None O
+34 None O
+
+Stephen Stephen_Mallory_II Stephen_Mallory_II PER 0.999998503852 None B-PER
+Mallory None I-PER
+II None I-PER
+
+He None O
+further None O
+studied None O
+in None O
+Italy Italy Italy GPE 0.999994576668 None B-LOC
+( None O
+1926–1928 None O
+) None O
+and None O
+Paris Paris Paris GPE 1.0 None B-LOC
+, None O
+France France France GPE 0.999997637559 None B-LOC
+( None O
+1928–1929 None O
+) None O
+. None O
+
+The None O
+competition None O
+took None O
+place None O
+on None O
+the None O
+Cresta Cresta_Run Cresta_Run ORG 0.746992027365 None B-ORG
+Run None I-ORG
+and None O
+medals None O
+were None O
+awarded None O
+after None O
+a None O
+total None O
+of None O
+three None O
+runs None O
+down None O
+the None O
+course None O
+. None O
+
+Moscow Moscow_linguistic_circle Moscow_linguistic_circle PER 0.685198852056 None B-PER
+linguistic None I-PER
+circle None I-PER
+
+Bo Bo_Nixon Bo_Nixon PER 0.999992409972 None B-PER
+Nixon None I-PER
+and None O
+pick None O
+7 None O
+
+Caddo Caddo_Lake_Drawbridge Caddo_Lake_Drawbridge ORG 0.999978194065 None B-ORG
+Lake None I-ORG
+Drawbridge None I-ORG
+
