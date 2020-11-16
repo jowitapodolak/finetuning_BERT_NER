@@ -5,7 +5,7 @@
 This is a repository containing experiments for our master's thesis: *Developing a Cross-Lingual Named Entity Recognition Model*.
 It contain scripts to rerun our experiments as well as overviews and analysis of our results.
 
-We are using **SimpleTransformers** library for our NER model, which is build on top on HuggingFace (API: https://simpletransformers.ai). The experiments are undertaken with transformer models: mBERT and XLM-RoBERTa (by setting model in main-method SimpleTransformer.py to 'bert-base-multilingual-cased' or 'xlm-roberta-base'; see more information here https://huggingface.co/transformers/pretrained_models.html)
+We are using **SimpleTransformers** library for our NER model, which is build on top of HuggingFace (API: https://simpletransformers.ai). The experiments are undertaken with transformer models: mBERT and XLM-RoBERTa (by setting model in main-method SimpleTransformer.py to 'bert-base-multilingual-cased' or 'xlm-roberta-base'; see more information here https://huggingface.co/transformers/pretrained_models.html)
 
 Unlike most other research we utilize **WikiANN** datasets derived from Wikipedia for 31 languages (accessible here: https://elisa-ie.github.io/wikiann/). 
 
