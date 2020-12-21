@@ -36,8 +36,8 @@ Look for details: https://towardsdatascience.com/simple-transformers-introducing
 
 Folder **languages** does not contain WikiANN files as they are too large for GitHub. To reproduce its contents go on WikiANN website or google drive from 'Cross-lingual Name Tagging and Linking for 282 Languages' paper: https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN and choose data/name_tagging.\
 We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN).\
-Drag WikiANN datasets into languages folder in the following structure:\ 
-languages:\ 
+Drag WikiANN datasets into languages folder in the following structure:   
+languages:  
   en\
     wikiann-en.bio\
   pl\
