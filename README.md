@@ -14,7 +14,7 @@ Unlike most other research we utilize **WikiANN** datasets derived from Wikipedi
 ### Prerequisites
 
 1. Install Anaconda or Miniconda Package Manager
-2. Create a new virtual environment and install the required packages.
+2. Create a new virtual environment and install the required packages. Commands to do so below. 
 
 conda create -n transformers python pandas tqdm\
 conda activate transformers\
@@ -38,9 +38,9 @@ Folder **languages** does not contain WikiANN files as they are too large for Gi
 We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN).\
 Drag WikiANN datasets into languages folder in the following structure:   
 languages:  
- &nbsp; en\
+ en\
   &nbsp;  wikiann-en.bio\
- &nbsp; pl\
+ pl\
  &nbsp;   wikiann-pl.bio\
     ...\
 Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.\
