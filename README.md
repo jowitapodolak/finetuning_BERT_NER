@@ -27,9 +27,9 @@ conda install -c anaconda scikit-learn\
 pip install transformers\
 pip install tensorboardx\
 Install simpletransformers:\
-pip install simpletransformers\
+pip install simpletransformers
 
-Look for details: https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3 (Installation)\ 
+Look for details: https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3 (Installation) 
 
 
 ###  Languages
