@@ -38,10 +38,10 @@ Folder **languages** does not contain WikiANN files as they are too large for Gi
 We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN).\
 Drag WikiANN datasets into languages folder in the following structure:   
 languages:  
-  en\
-    wikiann-en.bio\
-  pl\
-    wikiann-pl.bio\
+ &nbsp; en\
+  &nbsp;  wikiann-en.bio\
+ &nbsp; pl\
+ &nbsp;   wikiann-pl.bio\
     ...\
 Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.\
 
