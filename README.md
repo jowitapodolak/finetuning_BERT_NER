@@ -37,12 +37,15 @@ Look for details: https://towardsdatascience.com/simple-transformers-introducing
 Folder **languages** does not contain WikiANN files as they are too large for GitHub. To reproduce its contents go on WikiANN website or google drive from 'Cross-lingual Name Tagging and Linking for 282 Languages' paper: https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN and choose data/name_tagging.\
 We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN).\
 Drag WikiANN datasets into languages folder in the following structure:   
+<pre>
 languages:  
- en\
-  &nbsp;  wikiann-en.bio\
- pl\
- &nbsp;   wikiann-pl.bio\
-    ...\
+  en
+     wikiann-en.bio
+  pl
+     wikiann-pl.bio
+  ...
+</pre>
+    
 Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.
 
 Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment).
@@ -56,19 +59,19 @@ Parameters correspond to mBERT parameters (https://arxiv.org/pdf/1906.01502.pdf)
 
 To keep mBERT's settings, we leave the attributes in the args dictionary, i.e., model hyperparameters, mostly unchanged (only changing the model and evaluation results saving settings).
 <pre>
-model = NERModel('bert',\ 
-                    'bert-base-multilingual-cased',\
-                    labels=["O",\
-                    "B-MISC",\
-                    "I-MISC",\
-                    "B-PER",\
-                    "I-PER",\
-                    "B-ORG",\
-                    "I-ORG",\
-                    "B-LOC",\
-                    "I-LOC"],\
-                    #use_cuda=False,\
-                    args={...}\
+model = NERModel('bert',
+                    'bert-base-multilingual-cased',
+                    labels=["O",
+                    "B-MISC",
+                    "I-MISC",
+                    "B-PER",
+                    "I-PER",
+                    "B-ORG",
+                    "I-ORG",
+                    "B-LOC",
+                    "I-LOC"],
+                    #use_cuda=False,
+                    args={...}
 </pre>
 
 ## Description  
