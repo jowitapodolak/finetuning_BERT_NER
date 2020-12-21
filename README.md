@@ -92,19 +92,19 @@ We trim datasets. Thee are 3 ways of doing it:
 
 After running,
 
-<pre>
+
 1 % preprocessing/run_limit_and_split_datasets.sh  you will get:
 languages
-    uk -> wikiann-uk.bio,   **train_output.txt,  test_output.txt**
+    &nbsp;&nbsp;uk -> &nbsp;&nbsp;&nbsp;wikiann-uk.bio,   **train_output.txt,  test_output.txt**
 
 2 % preprocessing/run_limit_datasets.sh  you will get:
-languages
+languages ->
     uk -> wikiann-uk.bio,   train_output.txt,  test_output.txt,   **dataset.txt**
         
 3 % preprocessing/run_limit_datasets_loop.sh  you will get:
-languages
+languages ->
     uk. -> wikiann-uk.bio,   train_output.txt,  test_output.txt,   dataset.txt,  **dataset_1.txt, dataset_2.txt, dataset_3.txt, dataset_4.txt** 
-</pre>
+
 
  The first command is shuffling and limiting the dataset to 17,003 sentences (the size of the smallest dataset - for Breton language) and splitting it into train and test in proportion 80/20. 
  The second is just shuffling and reducing the size (also to 17,003 sentences). 
