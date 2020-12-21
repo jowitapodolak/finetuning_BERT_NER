@@ -80,13 +80,13 @@ The main code is in a file **SimpleTransformers.py**. Features experiment uses a
 
 All scripts are run from the root folder.  
 
-small_en_txt contains a very small chunk of the English dataset (around 16 first sentences) for 'naked-eye testing'. 
+small_en_txt contains a very small chunk of the English dataset (around 16 first sentences) for naked-eye testing. 
 
 Folder **preprocessing** contains code and scripts for trimming datasets and train/tests splits.  
 
 After downloading WikiANN into the following structure:
 
-languages -> uk -> wikiann-uk.bio
+languages -> uk -> wikiann-uk.bio (see section Languages above)
 
 We trim datasets. Thee are 3 ways of doing it:
 
