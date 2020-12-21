@@ -18,34 +18,34 @@ Unlike most other research we utilize **WikiANN** datasets derived from Wikipedi
 
 conda create -n transformers python pandas tqdm\
 conda activate transformers\
+If using cuda:\
+conda install pytorch cudatoolkit=10.0 -c pytorch\
+else:\
+conda install pytorch cpuonly -c pytorch\
+conda install -c anaconda scipy\
+conda install -c anaconda scikit-learn\
+pip install transformers\
+pip install tensorboardx\
+Install simpletransformers:\
+pip install simpletransformers\
 
-If using cuda:
-conda install pytorch cudatoolkit=10.0 -c pytorch
-else:
-conda install pytorch cpuonly -c pytorch
-conda install -c anaconda scipy
-conda install -c anaconda scikit-learn
-pip install transformers
-pip install tensorboardx
-Install simpletransformers.
-pip install simpletransformers 
-
-Look for details: https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3 (Installation). 
+Look for details: https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3 (Installation)\ 
 
 
 ###  Languages
 
-Folder **languages** does not contain WikiANN files as they are too large for GitHub. To reproduce its contents go on WikiANN website or google drive from 'Cross-lingual Name Tagging and Linking for 282 Languages' paper: https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN and choose data/name_tagging.
-We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN). Drag WikiANN datasets into languages folder in the following structure: 
-languages: 
-  en
-    wikiann-en.bio 
-  pl 
-    wikiann-pl.bio 
-    ... 
-Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.
+Folder **languages** does not contain WikiANN files as they are too large for GitHub. To reproduce its contents go on WikiANN website or google drive from 'Cross-lingual Name Tagging and Linking for 282 Languages' paper: https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN and choose data/name_tagging.\
+We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN).\
+Drag WikiANN datasets into languages folder in the following structure:\ 
+languages:\ 
+  en\
+    wikiann-en.bio\
+  pl\
+    wikiann-pl.bio\
+    ...\
+Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.\
 
-Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment). 
+Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment).\
 
 
 
