@@ -94,8 +94,9 @@ After running,
 
 
 1 % preprocessing/run_limit_and_split_datasets.sh  you will get:
-languages
-    &nbsp;&nbsp;uk -> &nbsp;&nbsp;&nbsp;wikiann-uk.bio,   **train_output.txt,  test_output.txt**
+languages\
+    &nbsp;&nbsp;uk\
+    &nbsp;&nbsp;&nbsp;wikiann-uk.bio,   **train_output.txt,  test_output.txt**
 
 2 % preprocessing/run_limit_datasets.sh  you will get:
 languages ->
