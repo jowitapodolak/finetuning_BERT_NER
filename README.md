@@ -86,7 +86,9 @@ Folder **preprocessing** contains code and scripts for trimming datasets and tra
 
 After downloading WikiANN into the following structure:
 
-languages -> uk -> wikiann-uk.bio (see section Languages above)
+&nbsp;&nbsp;&nbsp;&nbsp;languages\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uk\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wikiann-uk.bio (see section Languages above)
 
 We trim datasets. Thee are 3 ways of doing it:
 
