@@ -43,9 +43,9 @@ languages:
  pl\
  &nbsp;   wikiann-pl.bio\
     ...\
-Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.\
+Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.
 
-Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment).\
+Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment).
 
 
 
