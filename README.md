@@ -15,8 +15,11 @@ Unlike most other research we utilize **WikiANN** datasets derived from Wikipedi
 
 1. Install Anaconda or Miniconda Package Manager
 2. Create a new virtual environment and install the required packages.
+
 conda create -n transformers python pandas tqdm
+
 conda activate transformers
+
 If using cuda:
 conda install pytorch cudatoolkit=10.0 -c pytorch
 else:
