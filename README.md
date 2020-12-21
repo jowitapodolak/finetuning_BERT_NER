@@ -56,19 +56,19 @@ Parameters correspond to mBERT parameters (https://arxiv.org/pdf/1906.01502.pdf)
 
 To keep mBERT's settings, we leave the attributes in the args dictionary, i.e., model hyperparameters, mostly unchanged (only changing the model and evaluation results saving settings).
 
-model = NERModel('bert', 
-                    'bert-base-multilingual-cased',
-                    labels=["O",
-                    "B-MISC",
-                    "I-MISC",
-                    "B-PER",
-                    "I-PER",
-                    "B-ORG",
-                    "I-ORG",
-                    "B-LOC",
-                    "I-LOC"],
-                    #use_cuda=False,
-                    args={...}
+model = NERModel('bert',\ 
+                    'bert-base-multilingual-cased',\
+                    labels=["O",\
+                    "B-MISC",\
+                    "I-MISC",\
+                    "B-PER",\
+                    "I-PER",\
+                    "B-ORG",\
+                    "I-ORG",\
+                    "B-LOC",\
+                    "I-LOC"],\
+                    #use_cuda=False,\
+                    args={...}\
 
 
 ## Description  
