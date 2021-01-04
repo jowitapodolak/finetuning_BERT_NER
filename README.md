@@ -3,9 +3,9 @@
 # Finetuning mBERT and XLM-R on NER task with WikiANN datasets
 
 This is a repository containing experiments for our master's thesis: *Developing a Cross-Lingual Named Entity Recognition Model*.
-It contain scripts to rerun our experiments as well as overviews and analysis of our results.
+It contains scripts to rerun our experiments as well as overviews and analysis of our results.
 
-We are using **SimpleTransformers** library for our NER model, which is build on top on HuggingFace (API: https://simpletransformers.ai). The experiments are undertaken with transformer models: mBERT and XLM-RoBERTa (by setting model in main-method SimpleTransformer.py to 'bert-base-multilingual-cased' or 'xlm-roberta-base'; see more information here https://huggingface.co/transformers/pretrained_models.html)
+We are using **SimpleTransformers** library for our NER model, which is built on top of HuggingFace (API: https://simpletransformers.ai). The experiments are undertaken with transformer models: mBERT and XLM-RoBERTa (by setting model in main-method SimpleTransformer.py to 'bert-base-multilingual-cased' or 'xlm-roberta-base'; see more information here https://huggingface.co/transformers/pretrained_models.html)
 
 Unlike most other research we utilize **WikiANN** datasets derived from Wikipedia for 31 languages (accessible here: https://elisa-ie.github.io/wikiann/). 
 
@@ -14,36 +14,41 @@ Unlike most other research we utilize **WikiANN** datasets derived from Wikipedi
 ### Prerequisites
 
 1. Install Anaconda or Miniconda Package Manager
-2. Create a new virtual environment and install the required packages.
-conda create -n transformers python pandas tqdm
-conda activate transformers
-If using cuda:
-conda install pytorch cudatoolkit=10.0 -c pytorch
-else:
-conda install pytorch cpuonly -c pytorch
-conda install -c anaconda scipy
-conda install -c anaconda scikit-learn
-pip install transformers
-pip install tensorboardx
-Install simpletransformers.
-pip install simpletransformers 
+2. Create a new virtual environment and install the required packages. Commands to do so below. 
 
-Look for details: https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3 (Installation). 
+conda create -n transformers python pandas tqdm\
+conda activate transformers\
+If using cuda:\
+conda install pytorch cudatoolkit=10.0 -c pytorch\
+else:\
+conda install pytorch cpuonly -c pytorch\
+conda install -c anaconda scipy\
+conda install -c anaconda scikit-learn\
+pip install transformers\
+pip install tensorboardx\
+Install simpletransformers:\
+pip install simpletransformers
+
+Look for details: https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3 (Installation) 
 
 
 ###  Languages
 
-Folder **languages** does not contain WikiANN files as they are too large for GitHub. To reproduce its contents go on WikiANN website or google drive from 'Cross-lingual Name Tagging and Linking for 282 Languages' paper: https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN and choose data/name_tagging.
-We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN). Drag WikiANN datasets into languages folder in the following structure: 
-languages: 
+Folder **languages** does not contain WikiANN files as they are too large for GitHub. To reproduce its contents go on WikiANN website or google drive from 'Cross-lingual Name Tagging and Linking for 282 Languages' paper: https://drive.google.com/drive/folders/1Q-xdT99SeaCghihGa7nRkcXGwRGUIsKN and choose data/name_tagging.\
+We ran our tests on 31 languages (languages with datasets above 100 000 lines): en,sv,de,ru,fr,es,pl,it,nl,uk,cs,hu,no,sr/ hr,fi,tr,pt,bg,ro,eu,el,lt,sl,et,tt,lv,ka,cy,sq,hy,br  (abbrieviation corresponding to WikiANN).\
+Drag WikiANN datasets into languages folder in the following structure:   
+<pre>
+languages:  
   en
-    wikiann-en.bio 
-  pl 
-    wikiann-pl.bio 
-    ... 
-Mac users should use a command tar -xvf ro.tar when unpacking romanian language - the default encoding is not working correctly for romanian alphabet.
+     wikiann-en.bio
+  pl
+     wikiann-pl.bio
+  ...
+</pre>
+    
+Mac users should use a command tar -xvf ro.tar when unpacking the romanian language - the default encoding is not working correctly for the romanian alphabet.
 
-Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment). 
+Languages folder also contains empty folders (f1,f2,f3,...) where datasets for each feature will be stored after creation (see Feature Experiment).
 
 
 
@@ -53,8 +58,8 @@ Languages folder also contains empty folders (f1,f2,f3,...) where datasets for e
 Parameters correspond to mBERT parameters (https://arxiv.org/pdf/1906.01502.pdf) with the number of epochs being the only difference - we used 1 instead of 3 from the paper. 
 
 To keep mBERT's settings, we leave the attributes in the args dictionary, i.e., model hyperparameters, mostly unchanged (only changing the model and evaluation results saving settings).
-
-model = NERModel('bert', 
+<pre>
+model = NERModel('bert',
                     'bert-base-multilingual-cased',
                     labels=["O",
                     "B-MISC",
@@ -67,42 +72,51 @@ model = NERModel('bert',
                     "I-LOC"],
                     #use_cuda=False,
                     args={...}
-
+</pre>
 
 ## Description  
 
-Main code is in file **SimpleTransformers.py**. Features experiment uses file from **experiments** folder while Language-pairs experiment uses file from the root folder (they are essentially the same - just a different design in the execution scripts).
+The main code is in a file **SimpleTransformers.py**. Features experiment uses a file from **experiments** folder while Language-pairs experiment uses file from the root folder (they are essentially the same - just a different design in the execution scripts).
 
 All scripts are run from the root folder.  
 
-small_en_txt contains a very small chunk of english dataset (around 16 first sentences) for 'naked-eye testing'. 
+small_en_txt contains a very small chunk of the English dataset (around 16 first sentences) for naked-eye testing. 
 
 Folder **preprocessing** contains code and scripts for trimming datasets and train/tests splits.  
 
 After downloading WikiANN into the following structure:
 
-languages -> uk -> wikiann-uk.bio
+&nbsp;&nbsp;&nbsp;&nbsp;languages\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uk\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wikiann-uk.bio (see section Languages above)
 
 We trim datasets. Thee are 3 ways of doing it:
 
 After running,
 
+
 1 % preprocessing/run_limit_and_split_datasets.sh  you will get:
-languages
-    uk -> wikiann-uk.bio,   train_output.txt,  test_output.txt
-train_output.txt
+
+&nbsp;&nbsp;&nbsp;&nbsp;languages\
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;uk\
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wikiann-uk.bio,   **train_output.txt,  test_output.txt**
 
 2 % preprocessing/run_limit_datasets.sh  you will get:
-languages
-    uk ->    dataset.txt 
+
+&nbsp;&nbsp;&nbsp;&nbsp;languages\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uk\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wikiann-uk.bio,   train_output.txt,  test_output.txt,   **dataset.txt**
         
 3 % preprocessing/run_limit_datasets_loop.sh  you will get:
-languages
-    uk. -> dataset_1.txt, dataset_2.txt, dataset_3.txt, dataset_4.txt 
- 
- First command is shuffeling and limiting the dataset to 17,003 sentences (the size of the smallest dataset - for Breton language) and splitting it into train and test in proportion 80/20. 
- Second is just shuffeling and reducing the size (also to 17,003 sentences). 
- Third one is done for better evaluation (cross-validation) - we randomly pick sentences for four datasets (each having 17,003  sentences) to later take the average of their F1 score and therefore have a better evaluation. To reproduce our experiments we need this option (we need 4 datasets, each 17,003 sentences).
+
+&nbsp;&nbsp;&nbsp;&nbsp;languages\
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uk\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wikiann-uk.bio,   train_output.txt,  test_output.txt,   dataset.txt,  **dataset_1.txt, dataset_2.txt, dataset_3.txt, dataset_4.txt** 
+
+
+ The first command is shuffling and limiting the dataset to 17,003 sentences (the size of the smallest dataset - for Breton language) and splitting it into train and test in proportion 80/20. 
+ The second is just shuffling and reducing the size (also to 17,003 sentences). 
+ The third one is done for better evaluation (cross-validation) - we randomly pick sentences for four datasets (each having 17,003  sentences) to later take the average of their F1 score and therefore have a better evaluation. To reproduce our experiments we need this option (we need 4 datasets, each with 17,003 sentences).
  
   
  ## Language-Pair Experiments
@@ -112,7 +126,7 @@ languages
  
  run_transformer_all_languages.sh contains on the one hand the experiments run from Language-Pair Experiments and also the follow-up experiments we did after Features-Experiment (see thesis for more explanation)
  
- ### lanaguage pairs for experiments: 
+ ### language pairs for experiments: 
  
 Number of language pairs (number_of_experiments) and overview with pairs(df_euclidean_dist) in: DOE:script_generator/DOE_LanguageSimilarity.ipynb
  
@@ -127,9 +141,8 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  to run this experiment call experiments/feature1/run_transformer.sh and continue for each of 13 features or run simply: 
  experiments/run_transformer_all_features.sh  (recommended) 
  
- ### lanaguage groups for experiments: 
- 
- ![Language groups for feature 1](https://github.itu.dk/jopo/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png)
+ ### language groups for experiments: 
+ ![Language groups for feature1](https://github.com/jowitapodolak/finetuning_BERT_NER/blob/master/experiments/feature_experiment_doe.png)
  
  
  ### scripts description 
@@ -149,17 +162,25 @@ Number of language pairs (number_of_experiments) and overview with pairs(df_eucl
  
  
  ## Results 
- Models and full results are saved in folder results. 
+ ### for feature expriments
+ Models and full results are saved in **results** folder.
  
- This is an exemplary line (chunk of it) from the experiment scrip of feature 1: 
+ This is an exemplary line (chunk of it) from the experiment script for feature 1: 
  ```bash
  python3 experiments/SimpleTransformers.py .... 'results/output_f1/dataset_4/exp1/fine_tuning_1'
  ```
  
- We see here clearly the hierarchy of the results folder after running. They are all storred in the results folder. Then for each feature we have an output folder. Each output folder has further four folders (for four cross validation datasets). Then each dataset has 2 experiments and each experiment had two fine-tunings.
+ which presents the hierarchy of the results folder after running. For each feature, we have an output folder. Each output folder has a further four folders (for four cross-validation datasets). Then, each dataset has 2 experiments and each experiment had two fine-tunings.
  
-Each model we run is saved in the folder results as pytorch_model.bin file. The evaluation over labels is in eval_results.txt (from here we take F1 scores for our thesis)  
+Each model we run is saved in the folder results as pytorch_model.bin file. The evaluation over labels is in eval_results.txt (from here we take F1 scores for our thesis)   
 
+### for language-pair experiment
+Models and full results are saved in **results_lan** folder. 
+An exemplary path, to results for the distance 1.0, between Ukraininan and Latvian:
+```bash
+ results_lan/results_1.0/output_1.0/Ukr_Ltv_1
+ ```
+ 
 After running all experiments, there are in /LanSimilarity - results, /LanSim_FiltFeat - results and /Features - results, executable python-files collecting F1 score, precision and recall results and gather them in a results-csv file.
 
 The three directories also contain:
@@ -177,13 +198,9 @@ The three directories also contain:
 * **Philine Zeinert** 
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
- We would like to express our deep gratitude to our thesis supervison, Professor Leon Derczynski. 
+ We would like to express our deep gratitude to our thesis supervision, Professor Leon Derczynski. 
 
 
 
